@@ -6,7 +6,7 @@ const http = require("http");
 const cors = require("cors");
 const SocketIO = require("socket.io");
 
-var whitelist = ["http://localhost:3000"];
+var whitelist = ["http://localhost:3000", "https://twitter-helpdesk-pt.herokuapp.com"];
 var corsOptions = {
   exposedHeaders: ["x-auth-token"],
   origin: function(origin, callback) {
