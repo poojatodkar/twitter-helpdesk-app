@@ -6,21 +6,8 @@ const http = require("http");
 const cors = require("cors");
 const SocketIO = require("socket.io");
 
-var whitelist = ["http://localhost:3000", "https://twitter-helpdesk-pt.herokuapp.com/"];
-var corsOptions = {
-  exposedHeaders: ["x-auth-token"],
-  origin: function(origin, callback) {
-    if (whitelist.indexOf(origin) !== -1) {
-      callback(null, true);
-    } else {
-      callback(new Error("Blocked by CORS", origin));
-    }
-  }
-};
-
 const app = express();
 
-app.use(cors(corsOptions));
 app.use(passport.initialize());
 require("./config/passport")(passport);
 
@@ -39,6 +26,8 @@ if (process.env.NODE_ENV === "production") {
     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
   });
 }
+
+app.use(cors());
 
 const port = process.env.PORT || 5000;
 
