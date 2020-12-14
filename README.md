@@ -1,7 +1,7 @@
 # Proof of Concept (POC) Twitter Streaming application.
 
 Clone
-git clone git@github.com:poojatodkar/twitter-helpdesk.git
+git clone git@github.com:poojatodkar/twitter-helpdesk-app.git
 
 FE Build
 cd client && npm start
