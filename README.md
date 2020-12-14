@@ -1,4 +1,4 @@
-# RichPanel Proof of Concept (POC) Twitter Streaming application.
+# Proof of Concept (POC) Twitter Streaming application.
 
 Clone
 git clone git@github.com:poojatodkar/twitter-helpdesk.git
